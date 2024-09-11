@@ -1,5 +1,7 @@
 import 'package:katyayani_organics/models/product_model.dart';
 
+// data as per the model
+
 List<Product> products = [
   Product(id: 1, name: 'Apple', price: 80, image: 'assets/images/apple.png'),
   Product(

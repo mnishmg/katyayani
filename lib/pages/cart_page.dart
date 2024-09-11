@@ -67,6 +67,7 @@ class CartPage extends StatelessWidget {
                         color: Colors.black,
                       ),
                       onPressed: () {
+                      // removing products from cart
                         cartProvider.removeFromCart(product[index]);
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(

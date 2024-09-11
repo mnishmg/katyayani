@@ -94,6 +94,7 @@ class HomePage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
                     onPressed: () {
+                      // adding products to cart
                       cartProvider.addToCart(products[index]);
                       print('${products[index].name} added to cart!');
                       ScaffoldMessenger.of(context).showSnackBar(
