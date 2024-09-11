@@ -40,7 +40,7 @@ class CartPage extends StatelessWidget {
         padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
         child: Consumer<CartProvider>(
           builder: (_, cartProvider, __) {
-            var product = cartProvider.cartItems.values.toList();
+            var product = cartProvider.cartItems;
             return ListView.builder(
               itemCount: cartProvider.cartItems.length,
               itemBuilder: (context, index) {
@@ -67,7 +67,7 @@ class CartPage extends StatelessWidget {
                         color: Colors.black,
                       ),
                       onPressed: () {
-                        cartProvider.removeFromCart(product[index].id);
+                        cartProvider.removeFromCart(product[index]);
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(

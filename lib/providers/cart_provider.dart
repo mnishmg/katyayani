@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import '../models/product_model.dart';
 
 class CartProvider with ChangeNotifier {
-  Map<String, Product> cartItems = {};
+  List<Product> cartItems = [];
 
   void addToCart(Product product) {
-    cartItems[product.id] = product;
+    cartItems.add(product);
     notifyListeners();
   }
 
-  void removeFromCart(String productId) {
-    cartItems.remove(productId);
+  void removeFromCart(Product product) {
+    cartItems.remove(product);
     notifyListeners();
   }
 }
