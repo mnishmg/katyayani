@@ -1,3 +1,6 @@
+
+// data model
+
 class Product {
   final int id;
   final String name;
